@@ -1,98 +1,328 @@
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #eef2f3;
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
+.intro-text h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
 }
 
-.browser-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    background-color: #444;
-    padding: 10px;
+.intro-text h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-menu li {
+    display: inline-block; 
+    margin: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li:hover {
+    color: yellow;
+}
+
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-flex-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content {
+    padding-left: 30px;
+    width: 60%;
+    float: left; 
+}
+
+.about-content h2 {
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.tab-section {
-    display: flex;
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 40px;
 }
 
-.tab {
-    width: 50px;
-    height: 20px;
-    background-color: #666;
-    margin-right: 10px;
-    border-radius: 5px;
+.about-image {
+    width: 30%; 
+    float: right; 
+    text-align: center;
 }
 
-.controls-section {
-    display: flex;
-}
-
-.control-button {
-    width: 15px;
-    height: 15px;
-    background-color: #999;
-    margin-left: 10px;
+.about-image img {
+    max-width: 200px;
+    height: 200px;
     border-radius: 50%;
+    border: 2px solid #ccc;
 }
 
-.main-content {
-    display: flex;
-    justify-content: space-between;
+.project-description-floating {
+    background-color: #933399;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 220px;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 65%;
+    transform: translateY(-50%);
+}
+
+.project-description-floating h3 {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-description-floating p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#skills-container {
+    background-image: url('https://thumbs.dreamstime.com/b/ai-machine-learning-hands-robot-human-touching-big-data-network-connection-background-science-artificial-intelligence-172987598.jpg');
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+    padding: 40px; 
+    text-align: center; 
+}
+
+
+.skills-list {
+    margin-top: 30px;
+    text-align: center; 
+}
+
+.skills-list button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px; 
+}
+
+.skills-list button:hover {
+    transform: translateY(-10px);
+}
+
+#projects-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-cards {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: space-between; /* Space cards evenly */
+}
+
+.card {
+    width: calc(48% - 20px); /* Adjust width for the first two cards */
+    margin-bottom: 40px; /* Space between rows */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    color: rgb(95, 60, 60);
+    font-family: Arial, sans-serif;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+}
+
+.full-width-card {
+    width: 100%; /* Full width for the last card */
+    margin-bottom: 20px; /* Space below the card */
+    padding: 40px; /* Increased padding for better spacing */
+    border-radius: 15px; /* Consistent rounding */
+    background-color: #6A5ACD; /* Use the desired color */
+    color: rgb(176, 109, 109);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 18px; /* Increased font size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+}
+
+.orange-card {
+    background-color: #FFA500; /* Orange background */
+}
+
+.blue-card {
+    background-color: #007BFF; /* Blue background */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.full-width-card h3 {
+    font-size: 24px; /* Increased title size */
+    margin-bottom: 15px; /* Space below title */
+}
+
+.full-width-card p {
+    font-size: 16px; /* Adjust paragraph size */
+}
+
+
+
+.orange-card {
+    background-color: #FFA500; /* Orange background */
+}
+
+.blue-card {
+    background-color: #007BFF; /* Blue background */
+}
+
+.full-width-card {
+    background-color: #6A5ACD; /* Choose a color for the full-width card */
+}
+
+
+/* .card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+#contact {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#contact h2 {
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.banner {
-    flex: 3;
-    background-color: #555;
-    height: 300px;
-    margin-right: 20px;
+#contact p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+form {
+    display: block;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.side-box {
-    flex: 1.5;
-    background-color: #999;
-    height: 300px;
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button[type="submit"] {
+    width: 120px;
+    background-color: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.grid-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
+button[type="submit"]:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
-.grid-item {
-    width: 23%;
-    height: 120px;
-    background-color: #ccc;
-    margin-bottom: 20px;
-    border-radius: 5px;
+footer {
+    margin-top: 30px;
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
 }
 
-.bottom-content {
-    display: flex;
-    justify-content: space-between;
+footer a {
+    color: yellow;
+    text-decoration: none;
+    margin: 0 5px;
 }
 
-.bottom-box {
-    width: 48%;
-    height: 100px;
-    background-color: #bbb;
-    border-radius: 5px;
+footer a:hover {
+    color: white;
+    text-decoration: none;
 }
